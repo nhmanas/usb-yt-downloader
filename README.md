@@ -47,6 +47,16 @@ Step-by-Step Guide to Triggering a USB Plug Event and Executing a Script on Debi
 
 7. **Create the Shell Script (ytstart.sh):**
    - Write a shell script (e.g., `script.sh`) that sets up the virtual environment (if applicable), activates it, runs the Python script (`yt.py`), and deactivates the virtual environment.
+     ```
+     #!/bin/bash
+     echo "Running ytstart.sh" >> /tmp/yt_debug.log
+     source /opt/venv/bin/activate  # Activate the virtual environment
+     python3 /home/username/scripts/yt.py >> /tmp/yt_debug.log 2>&1
+     deactivate  # Deactivate the virtual environment
+     echo "Finished ytstart.sh" >> /tmp/yt_debug.log
+     ```
+
+
 
 8. **Make Shell Script Executable:**
    - Make the shell script executable using the chmod command:
