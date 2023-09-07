@@ -1,4 +1,6 @@
-Step-by-Step Guide to Triggering a USB Plug Event and Executing a Script on Debian 11 using udev and Systemd:
+If you want to use this python script only to download stuff, just edit main and run.
+
+But if your aim is to automate everything (I plug my usb to my pihole server, I unplug on my way out. Nothing more.) Here is step-by-step guide to triggering a uSB plug event and executing this script on Debian 11 using udev and Systemd:
 
 1. **Write the Python Script:**
    - Begin by creating a Python script (e.g., `yt.py`) that downloads videos and converts them to MP3 files according to your requirements.
